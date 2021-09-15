@@ -1,0 +1,67 @@
+.project_carousel-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.slider_btn {
+  border: none;
+  background: rgba(0, 0, 0, 0);
+  color: white;
+  font-size: 4rem;
+  font-weight: 400;
+  z-index: 20;
+
+  &:hover {
+    color: rgba(139, 137, 137, 0.8);
+    cursor: pointer;
+  }
+}
+
+.project_carousel {
+  position: relative;
+  width: 500px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.project_content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.9s ease-in-out;
+}
+
+.project_window {
+  position: absolute;
+  opacity: 0.95;
+  width: 500px;
+  height: 300px;
+
+  img {
+    box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    display: block;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  &:nth-child(1) {
+    transform: rotateY(0deg) translateZ(251px);
+  }
+
+  &:nth-child(2) {
+    transform: rotateY(90deg) translateZ(251px);
+  }
+
+  &:nth-child(3) {
+    transform: rotateY(180deg) translateZ(251px);
+  }
+
+  &:nth-child(4) {
+    transform: rotateY(270deg) translateZ(251px);
+  }
+}
